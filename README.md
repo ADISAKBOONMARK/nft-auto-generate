@@ -25,7 +25,13 @@ git clone https://github.com/ADISAKBOONMARK/nft-auto-generate.git
 
 1. Install Python
 2. Install Pip และ Pip Package
+
+```sh
+pip install python-decouple
+```
+
 3. Setup .env Create **.env**
+
 ```sh
 COUNT=12 <-- จำนวนภาพ
 INPUT_FILE_TYPE=.PNG <-- นามสกุลไฟล์ที่นำเข้า
