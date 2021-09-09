@@ -40,9 +40,13 @@ def create():
 
     for image_id in range(1, COUNT + 1):
         image_file_list = []
-
+        properties = []
         i=0
         for propertyValue in propertyValueList:
+            properties.append({
+                "name": ((propertyNameList[i]).split('_'))[1], 
+                "value": propertyValue[image_id % len(propertyValue)]
+            })
             image_file='images/' + propertyNameList[i] + '/' + propertyValue[image_id % len(propertyValue)] + INPUT_FILE_TYPE
             image_file_list.append(image_file)
             i=i+1
@@ -64,7 +68,7 @@ def create():
             STORE.append(image_file_list)
     
         f = open('output/properties/' + str(image_id) + '.txt', "w")
-        f.write(json.dumps(image_file_list))
+        f.write(json.dumps(properties))
         f.close()
 
     #     print('Create Token ID:',token_id,'-> DONE' )
