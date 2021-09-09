@@ -23,23 +23,22 @@ git clone https://github.com/ADISAKBOONMARK/nft-auto-generate.git
 
 ## Setting
 
-- 1. Install Python
-- 2. Install Pip และ Pip Package
-- 3. Setup .env Create **.env**
-
+1. Install Python
+2. Install Pip และ Pip Package
+3. Setup .env Create **.env**
 ```sh
 COUNT=12 <-- จำนวนภาพ
 INPUT_FILE_TYPE=.PNG <-- นามสกุลไฟล์ที่นำเข้า
 OUTPUT_FILE_TYPE=.png <-- นามสกุลไฟล์ที่ส่งออก
 ```
 
-- 4. Run
+4. Run
 
 ```sh
 py gen.py
 ```
 
-- 5. Output
+5. Output
 
 ```sh
 Create Token ID: 1 -> DONE
