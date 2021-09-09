@@ -94,7 +94,12 @@ properties/
 -- 3.txt
 
 ตัวอย่าง
-[{"name": "Background", "value": "Pink"}, {"name": "Skin", "value": "Pinky"}, {"name": "Body", "value": "Sun Flower T-Shirt"}, {"name": "Head", "value": "Banana"}, {"name": "Eyes", "value": "Chill Eyes"}, {"name": "Mouth", "value": "Pink Bubblegum"}]
+[{"name": "Background", "value": "Pink"}, 
+{"name": "Skin", "value": "Pinky"}, 
+{"name": "Body", "value": "Sun Flower T-Shirt"}, 
+{"name": "Head", "value": "Banana"}, 
+{"name": "Eyes", "value": "Chill Eyes"}, 
+{"name": "Mouth", "value": "Pink Bubblegum"}]
 ```
 
 ## สนับสนุนผู้พัฒนา
