@@ -53,7 +53,7 @@ def create():
 
         # print('Image File List:', image_file_list)
 
-        print('Create Token ID:', image_id, '-> DONE' )
+        print('Create Image ID:', image_id, '-> DONE' )
 
         matching(image_file_list, image_id)
 
@@ -70,15 +70,6 @@ def create():
         f = open('output/properties/' + str(image_id) + '.txt', "w")
         f.write(json.dumps(properties))
         f.close()
-
-    #     print('Create Token ID:',token_id,'-> DONE' )
-
-    #     background = BACKGROUND[token_id % len(BACKGROUND)] 
-    #     body = BODY[token_id % len(BODY)]
-    #     eyes = EYES[token_id % len(EYES)] 
-    #     head = HEAD[token_id % len(HEAD)] 
-    #     mouth = MOUTH[token_id % len(MOUTH)]
-    #     skin = SKIN[token_id % len(SKIN)]
 
     return 'END'
  

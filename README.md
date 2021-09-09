@@ -47,19 +47,19 @@ py gen.py
 5. Output
 
 ```sh
-Create Token ID: 1 -> DONE
-Create Token ID: 2 -> DONE
-Create Token ID: 3 -> DONE
-Create Token ID: 4 -> DONE
-Create Token ID: 5 -> DONE
-Create Token ID: 6 -> DONE
-Create Token ID: 7 -> DONE
-Create Token ID: 8 -> DONE
-Create Token ID: 9 -> DONE
-Create Token ID: 10 -> DONE
-Create Token ID: 11 -> DONE
+Create Image ID: 1 -> DONE
+Create Image ID: 2 -> DONE
+Create Image ID: 3 -> DONE
+Create Image ID: 4 -> DONE
+Create Image ID: 5 -> DONE
+Create Image ID: 6 -> DONE
+Create Image ID: 7 -> DONE
+Create Image ID: 8 -> DONE
+Create Image ID: 9 -> DONE
+Create Image ID: 10 -> DONE
+Create Image ID: 11 -> DONE
 Image ID: 11 duplicate! to Image ID: 1 <-- รูปที่ 11 ซ้ำกับรุปที่ 1
-Create Token ID: 12 -> DONE
+Create Image ID: 12 -> DONE
 Image ID: 12 duplicate! to Image ID: 2 <-- รูปที่ 12 ซ้ำกับรุปที่ 2
 END
 ```
