@@ -1,15 +1,13 @@
 import json
 import os
 from PIL import Image
-from decouple import config
 
-COUNT = int(config('COUNT'))
-INPUT_FILE_TYPE = config('INPUT_FILE_TYPE')
-OUTPUT_FILE_TYPE = config('OUTPUT_FILE_TYPE')
+CONFIG = json.loads(open('config.json', 'r').read())
 
-########################################################################
-# Utility code
-########################################################################
+COUNT = int(CONFIG['COUNT'])
+INPUT_FILE_TYPE = CONFIG['INPUT_FILE_TYPE']
+OUTPUT_FILE_TYPE = CONFIG['OUTPUT_FILE_TYPE']
+
 def matching(image_file_list, image_id):
     composite = None
     for image_file in image_file_list:
