@@ -21,21 +21,36 @@ Opensea Developer Tutorials: https://docs.opensea.io/docs/developer-tutorials
 git clone https://github.com/ADISAKBOONMARK/nft-auto-generate.git
 ```
 
-## Setting
+## For Artist 🎨
 
-1. Install Python
-2. Install Pip และ Pip Package
+1. Setup config.json
 
 ```sh
-pip install python-decouple
+{
+    "COUNT": "12",              <-- จำนวนภาพ
+    "INPUT_FILE_TYPE": ".PNG",  <-- นามสกุลไฟล์ที่นำเข้า
+    "OUTPUT_FILE_TYPE": ".png"  <-- นามสกุลไฟล์ที่ส่งออก
+}
 ```
 
-3. Setup .env Create **.env**
+2. Run
 
 ```sh
-COUNT=12 <-- จำนวนภาพ
-INPUT_FILE_TYPE=.PNG <-- นามสกุลไฟล์ที่นำเข้า
-OUTPUT_FILE_TYPE=.png <-- นามสกุลไฟล์ที่ส่งออก
+./gen.exe
+```
+
+## For Dev 🔥
+
+1. Install Python
+2. Install Pip
+3. Setup config.json
+
+```sh
+{
+    "COUNT": "12",              <-- จำนวนภาพ
+    "INPUT_FILE_TYPE": ".PNG",  <-- นามสกุลไฟล์ที่นำเข้า
+    "OUTPUT_FILE_TYPE": ".png"  <-- นามสกุลไฟล์ที่ส่งออก
+}
 ```
 
 4. Run
@@ -100,11 +115,11 @@ properties/
 -- 3.txt
 
 ตัวอย่าง
-[{"name": "Background", "value": "Pink"}, 
-{"name": "Skin", "value": "Pinky"}, 
-{"name": "Body", "value": "Sun Flower T-Shirt"}, 
-{"name": "Head", "value": "Banana"}, 
-{"name": "Eyes", "value": "Chill Eyes"}, 
+[{"name": "Background", "value": "Pink"},
+{"name": "Skin", "value": "Pinky"},
+{"name": "Body", "value": "Sun Flower T-Shirt"},
+{"name": "Head", "value": "Banana"},
+{"name": "Eyes", "value": "Chill Eyes"},
 {"name": "Mouth", "value": "Pink Bubblegum"}]
 ```
 
