@@ -4,4 +4,3 @@ output/properties/*.txt
 gen.spec
 dist
 build
-__pycache__
