@@ -3,4 +3,5 @@ output/properties/*.txt
 
 gen.spec
 build
+dist
 __pycache__
