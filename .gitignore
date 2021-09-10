@@ -1,9 +1,6 @@
 output/images/*.png
 output/properties/*.txt
 
-dist/gen/output/images/*.png
-dist/gen/output/properties/*.txt
-
 gen.spec
 build
 __pycache__
