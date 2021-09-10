@@ -36,13 +36,24 @@ git clone https://github.com/ADISAKBOONMARK/nft-auto-generate.git
 2. Run
 
 ```sh
+#== Windows ==#
 ./gen.exe
+```
+
+```sh
+#== Linux ==#
+./gen.sh
 ```
 
 ## For Dev 🔥
 
 1. Install Python
 2. Install Pip
+
+```sh
+pip install Image
+```
+
 3. Setup config.json
 
 ```sh
@@ -57,6 +68,10 @@ git clone https://github.com/ADISAKBOONMARK/nft-auto-generate.git
 
 ```sh
 py gen.py
+
+#== OR ==#
+
+python gen.py
 ```
 
 5. Output
@@ -125,6 +140,7 @@ properties/
 
 ## สนับสนุนผู้พัฒนา
 
+```sh
 🐷 28PX PIG
 
 เป็น Pixel Art Pig Avatar AI Generated
@@ -139,3 +155,4 @@ properties/
 69pixel team
 
 May the pig be with you. 🐖
+```
