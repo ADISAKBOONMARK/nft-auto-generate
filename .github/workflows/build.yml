@@ -43,6 +43,7 @@ jobs:
                   rm -r __pycache__ &&
                   rm -r build &&
                   rm -r dist &&
+                  rm -r gen.spec &&
                   zip -r9 macos.zip *
             OUT_FILE_NAME: macos.zip
             ASSET_MIME: application/zip
@@ -50,14 +51,14 @@ jobs:
             TARGET: ubuntu
             CMD_BUILD: > 
                   pyinstaller gen.py --onefile &&
-                  cp dist/gen ./gen.sh &&
-                  chmod +x gen.sh &&
+                  cp dist/* ./ &&
                   rm -r __pycache__ &&
                   rm -r build &&
                   rm -r dist &&
+                  rm -r gen.spec &&
                   tar -czvf linux.tar.gz *
             OUT_FILE_NAME: linux.tar.gz
-            ASSET_MIME: application/vnd.microsoft.portable-executable
+            ASSET_MIME: application/tar.gz
           - os: windows-latest
             TARGET: windows
             CMD_BUILD: > 
@@ -66,6 +67,7 @@ jobs:
                   rm -r __pycache__ &&
                   rm -r build &&
                   rm -r dist &&
+                  rm -r gen.spec &&
                   7z a "windows.zip" "."
             OUT_FILE_NAME: windows.zip
             ASSET_MIME: application/vnd.microsoft.portable-executable
