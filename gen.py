@@ -29,6 +29,7 @@ def create():
 
     STORE=[]
     propertyNameList = os.listdir('images')
+    propertyNameList.sort()
     # print('Property Name List:', propertyNameList)
     
     propertyValueList=[]
