@@ -56,7 +56,7 @@ jobs:
                   rm -r build &&
                   rm -r dist &&
                   rm -r gen.spec &&
-                  tar -czvf linux.tar.gz *
+                  tar -cf linux.tar.gz *
             OUT_FILE_NAME: linux.tar.gz
             ASSET_MIME: application/tar.gz
           - os: windows-latest
