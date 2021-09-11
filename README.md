@@ -73,9 +73,7 @@ pip install Image
 
 ```sh
 py gen.py
-
 #== OR ==#
-
 python gen.py
 ```
 
