@@ -42,7 +42,12 @@ git clone https://github.com/ADISAKBOONMARK/nft-auto-generate.git
 
 ```sh
 #== Linux ==#
-./gen.sh
+./gen
+```
+
+```sh
+#== Mac ==#
+./gen
 ```
 
 ## For Dev 🔥
