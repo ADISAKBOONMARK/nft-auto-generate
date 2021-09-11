@@ -48,11 +48,8 @@ jobs:
             CMD_BUILD: > 
                   pyinstaller gen.py --onefile &&
                   cp dist/gen.exe ./ &&
-                  rm -r __pycache__ &&
-                  rm -r build &&
-                  rm -r dist &&
                   tar.exe -a -cf windows.zip *
-            OUT_FILE_NAME: gen.exe
+            OUT_FILE_NAME: windows.zip
             ASSET_MIME: application/vnd.microsoft.portable-executable
     steps:
     - uses: actions/checkout@v1
@@ -84,7 +81,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.get_release_info.outputs.upload_url }}
-        asset_path: ./dist/${{ matrix.OUT_FILE_NAME}}
+        asset_path: ./${{ matrix.OUT_FILE_NAME}}
         asset_name: ${{ matrix.OUT_FILE_NAME}}
         asset_content_type: ${{ matrix.ASSET_MIME}}
 
