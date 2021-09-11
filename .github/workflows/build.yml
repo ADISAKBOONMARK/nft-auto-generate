@@ -35,17 +35,17 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: macos-latest
-            TARGET: macos
-            CMD_BUILD: >
-                  pyinstaller gen.py --onefile &&
-                  cp dist/* ./ &&
-                  rm -r __pycache__ &&
-                  rm -r build &&
-                  rm -r dist &&
-                  zip -r9 gen gen.app/
-            OUT_FILE_NAME: macos.zip
-            ASSET_MIME: application/zip
+          # - os: macos-latest
+          #   TARGET: macos
+          #   CMD_BUILD: >
+          #         pyinstaller gen.py --onefile &&
+          #         cp dist/* ./ &&
+          #         rm -r __pycache__ &&
+          #         rm -r build &&
+          #         rm -r dist &&
+          #         zip -r9 gen gen.app/
+          #   OUT_FILE_NAME: macos.zip
+          #   ASSET_MIME: application/zip
           # - os: ubuntu-latest
           #   TARGET: ubuntu
           #   CMD_BUILD: > 
