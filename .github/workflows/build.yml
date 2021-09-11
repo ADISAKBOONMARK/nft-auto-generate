@@ -46,18 +46,18 @@ jobs:
                   zip -r9 macos.zip *
             OUT_FILE_NAME: macos.zip
             ASSET_MIME: application/zip
-          # - os: ubuntu-latest
-          #   TARGET: ubuntu
-          #   CMD_BUILD: > 
-          #         pyinstaller gen.py --onefile &&
-          #         cp dist/* ./ &&
-          #         chmod +x gen.sh &&
-          #         rm -r __pycache__ &&
-          #         rm -r build &&
-          #         rm -r dist &&
-          #         tar -czvf ubuntu.tar.gz *
-          #   OUT_FILE_NAME: windows.zip
-          #   ASSET_MIME: application/vnd.microsoft.portable-executable
+          - os: ubuntu-latest
+            TARGET: ubuntu
+            CMD_BUILD: > 
+                  pyinstaller gen.py --onefile &&
+                  cp dist/gen ./gen.sh &&
+                  chmod +x gen.sh &&
+                  rm -r __pycache__ &&
+                  rm -r build &&
+                  rm -r dist &&
+                  tar -czvf linux.tar.gz *
+            OUT_FILE_NAME: linux.tar.gz
+            ASSET_MIME: application/vnd.microsoft.portable-executable
           - os: windows-latest
             TARGET: windows
             CMD_BUILD: > 
