@@ -46,7 +46,7 @@ jobs:
           - os: windows-latest
             TARGET: windows
             CMD_BUILD: > 
-                  pyinstaller gen.py --onefile
+                  pyinstaller gen.py --onefile &&
                   cp dist/gen.exe ./
             OUT_FILE_NAME: gen.exe
             # ASSET_MIME: application/vnd.microsoft.portable-executable
