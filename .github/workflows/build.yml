@@ -48,7 +48,7 @@ jobs:
             CMD_BUILD: > 
                   pyinstaller gen.py --onefile &&
                   cp dist/gen.exe ./ &&
-                  tar.exe -a -cf windows.zip *
+                  zip -r windows.zip .
             OUT_FILE_NAME: windows.zip
             ASSET_MIME: application/vnd.microsoft.portable-executable
     steps:
