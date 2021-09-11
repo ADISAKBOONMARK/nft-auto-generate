@@ -5,19 +5,40 @@ on:
     tags:
       - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
 
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Set up Python 3.9
+#         uses: actions/setup-python@v2
+#         with:
+#           python-version: 3.9
+#       - name: Install dependencies
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install Image
+#       - name: Build
+#         run: |
+#           pyinstaller gen.py --onefile
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: build
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest]
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install Image
-      - name: Build
-        run: |
-          pyinstaller gen.py --onefile
+    - name: Run with setup-python 2.7
+      uses: ./
+      with:
+        python-version: 2.7
+    - name: Verify 2.7
+      run: python gen.py
+
+    - name: Run with setup-python 3.5
+      uses: ./
+      with:
+        python-version: 3.5
+    - name: Verify 3.5
+      run: python gen.py
