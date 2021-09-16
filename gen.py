@@ -34,7 +34,7 @@ def create():
     
     propertyValueList=[]
     for propertyName in propertyNameList:
-        propertyValueList.append([w.replace('.PNG', '') for w in os.listdir('images/' + propertyName)])
+        propertyValueList.append([w.replace(INPUT_FILE_TYPE, '') for w in os.listdir('images/' + propertyName)])
     # print('Property Value List:', propertyValueList)
 
     for image_id in range(1, COUNT + 1):
