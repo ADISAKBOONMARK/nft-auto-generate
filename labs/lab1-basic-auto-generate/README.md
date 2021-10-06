@@ -1,0 +1,1 @@
+# lab1-basic-auto-generate
