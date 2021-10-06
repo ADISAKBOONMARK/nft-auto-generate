@@ -13,17 +13,17 @@ def set_properties():
     metadata_files = os.listdir('output/metadata')
     metadata_files.remove(".keep")
 
-    for file in range(1, len(metadata_files)):
+    for file_id in range(1, len(metadata_files)):
 
-        metadata = json.loads(open('output/metadata/%s' % file, 'r').read())
+        metadata = json.loads(open('output/metadata/%s' % file_id, 'r').read())
 
-        metadata["name"] = NAME
-        metadata["image"] = IMAGE_URL + str(file) + '.png'
+        metadata["name"] = NAME + " #" + str(file_id)
+        metadata["image"] = IMAGE_URL + str(file_id) + '.png'
         metadata["description"] = DESCRIPTION
     
         print(metadata["image"])
 
-        f = open('output/metadata/%s' % file, 'w')
+        f = open('output/metadata/%s' % file_id, 'w')
 
         f.write(json.dumps(metadata))
         f.close()

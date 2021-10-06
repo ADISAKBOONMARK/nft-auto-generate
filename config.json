@@ -4,5 +4,5 @@
     "OUTPUT_FILE_TYPE": ".png",
     "NAME": "name",
     "DESCRIPTION": "description",
-    "IMAGE_URL": "https://domain.com/token?id="
+    "IMAGE_URL": "https://domain.com/image/"
 }

@@ -27,9 +27,12 @@ git clone https://github.com/ADISAKBOONMARK/nft-auto-generate.git
 
 ```sh
 {
-    "COUNT": "12",              <-- จำนวนภาพ
-    "INPUT_FILE_TYPE": ".PNG",  <-- นามสกุลไฟล์ที่นำเข้า
-    "OUTPUT_FILE_TYPE": ".png"  <-- นามสกุลไฟล์ที่ส่งออก
+    "COUNT": "12",                                  <-- จำนวนภาพ
+    "INPUT_FILE_TYPE": ".png",                      <-- นามสกุลไฟล์ที่นำเข้า
+    "OUTPUT_FILE_TYPE": ".png"                      <-- นามสกุลไฟล์ที่ส่งออก
+    "NAME": "name",                                 <-- ชื่อภาพ
+    "DESCRIPTION": "description",                   <-- รายละเอียด
+    "IMAGE_URL": "https://domain.com/image/"        <-- Base URL ของรูปภาพ
 }
 ```
 
@@ -38,16 +41,19 @@ git clone https://github.com/ADISAKBOONMARK/nft-auto-generate.git
 ```sh
 #== Windows ==#
 ./gen.exe
+./set-properties.exe
 ```
 
 ```sh
 #== Linux ==#
 ./gen
+./set-properties
 ```
 
 ```sh
 #== Mac ==#
 ./gen
+./set-properties
 ```
 
 ## For Dev 🔥
@@ -63,13 +69,16 @@ pip install Image
 
 ```sh
 {
-    "COUNT": "12",              <-- จำนวนภาพ
-    "INPUT_FILE_TYPE": ".PNG",  <-- นามสกุลไฟล์ที่นำเข้า
-    "OUTPUT_FILE_TYPE": ".png"  <-- นามสกุลไฟล์ที่ส่งออก
+    "COUNT": "12",                                  <-- จำนวนภาพ
+    "INPUT_FILE_TYPE": ".png",                      <-- นามสกุลไฟล์ที่นำเข้า
+    "OUTPUT_FILE_TYPE": ".png"                      <-- นามสกุลไฟล์ที่ส่งออก
+    "NAME": "name",                                 <-- ชื่อภาพ
+    "DESCRIPTION": "description",                   <-- รายละเอียด
+    "IMAGE_URL": "https://domain.com/image/"        <-- Base URL ของรูปภาพ
 }
 ```
 
-4. Run
+4. Run generate images
 
 ```sh
 py gen.py
@@ -94,6 +103,31 @@ Create Image ID: 11 -> DONE
 Image ID: 11 duplicate! to Image ID: 1 <-- รูปที่ 11 ซ้ำกับรุปที่ 1
 Create Image ID: 12 -> DONE
 Image ID: 12 duplicate! to Image ID: 2 <-- รูปที่ 12 ซ้ำกับรุปที่ 2
+END
+```
+
+6. Run set properties images
+
+```sh
+py set-properties.py
+#== OR ==#
+python set-properties.py
+```
+
+7. Output
+
+```sh
+https://domain.com/image/1.png
+https://domain.com/image/2.png
+https://domain.com/image/3.png
+https://domain.com/image/4.png
+https://domain.com/image/5.png
+https://domain.com/image/6.png
+https://domain.com/image/7.png
+https://domain.com/image/8.png
+https://domain.com/image/9.png
+https://domain.com/image/10.png
+https://domain.com/image/11.png
 END
 ```
 
@@ -125,20 +159,46 @@ images/
 ```
 
 ```sh
-สุดท้ายโปรแกรมจะสร้าง properties ให้ด้วยตามชื่อไฟล์ output/properties โฟลเดอร์
+สุดท้ายโปรแกรมจะสร้าง metadata ให้ด้วยตามชื่อไฟล์ output/metadata โฟลเดอร์
 
-properties/
--- 1.txt
--- 2.txt
--- 3.txt
+metadata/
+-- 1
+-- 2
+-- 3
 
 ตัวอย่าง
-[{"name": "Background", "value": "Pink"},
-{"name": "Skin", "value": "Pinky"},
-{"name": "Body", "value": "Sun Flower T-Shirt"},
-{"name": "Head", "value": "Banana"},
-{"name": "Eyes", "value": "Chill Eyes"},
-{"name": "Mouth", "value": "Pink Bubblegum"}]
+
+{
+  "name": "name #1",
+  "description": "description",
+  "image": "https://domain.com/image/1.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Pink"
+    },
+    {
+      "trait_type": "Skin",
+      "value": "Pinky"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Sun Flower T-Shirt"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Chill Eyes"
+    },
+    {
+      "trait_type": "Head",
+      "value": "Banana"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Pink Bubblegum"
+    }
+  ]
+}
 ```
 
 ## สนับสนุนผู้พัฒนา
