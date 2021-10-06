@@ -72,7 +72,7 @@ def create():
     
         f = open('../../output/metadata/' + str(image_id), "w")
         f.write(json.dumps({
-            'name': NAME,
+            'name': NAME + " #" + str(image_id),
             'description': DESCRIPTION,
             'image': IMAGE_URL,
             'attributes': attributes
