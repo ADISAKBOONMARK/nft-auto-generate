@@ -1,5 +1,8 @@
 {
     "COUNT": "12",
     "INPUT_FILE_TYPE": ".png",
-    "OUTPUT_FILE_TYPE": ".png"
+    "OUTPUT_FILE_TYPE": ".png",
+    "NAME": "name",
+    "DESCRIPTION": "description",
+    "IMAGE_URL": "https://domain.com/token?id="
 }

@@ -1,7 +1,10 @@
 output/images/*.png
-output/properties/*.txt
+output/metadata/*
 
 gen.spec
+gen.exe
+set-properties.spec
+set-properties.exe
 build
 dist
 __pycache__

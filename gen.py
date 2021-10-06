@@ -8,6 +8,10 @@ COUNT = int(CONFIG['COUNT'])
 INPUT_FILE_TYPE = CONFIG['INPUT_FILE_TYPE']
 OUTPUT_FILE_TYPE = CONFIG['OUTPUT_FILE_TYPE']
 
+NAME =  CONFIG['NAME']
+DESCRIPTION = CONFIG['DESCRIPTION']
+IMAGE_URL = CONFIG['IMAGE_URL']
+
 def matching(image_file_list, image_id):
     composite = None
     for image_file in image_file_list:
@@ -39,11 +43,11 @@ def create():
 
     for image_id in range(1, COUNT + 1):
         image_file_list = []
-        properties = []
+        attributes = []
         i=0
         for propertyValue in propertyValueList:
-            properties.append({
-                "name": ((propertyNameList[i]).split('_'))[1], 
+            attributes.append({
+                "trait_type": ((propertyNameList[i]).split('_'))[1], 
                 "value": propertyValue[image_id % len(propertyValue)]
             })
             image_file='images/' + propertyNameList[i] + '/' + propertyValue[image_id % len(propertyValue)] + INPUT_FILE_TYPE
@@ -66,8 +70,13 @@ def create():
 
             STORE.append(image_file_list)
     
-        f = open('output/properties/' + str(image_id) + '.txt', "w")
-        f.write(json.dumps(properties))
+        f = open('output/metadata/' + str(image_id), "w")
+        f.write(json.dumps({
+            'name': NAME,
+            'description': DESCRIPTION,
+            'image': IMAGE_URL,
+            'attributes': attributes
+        }))
         f.close()
 
     return 'END'
