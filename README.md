@@ -1,6 +1,6 @@
 # 🐷 28PX PIG | NFT AUTO GENERATE
 
-จัดทำขึ้นเพื่อให้ความรู้ในการสร้าง NFT แบบ อัตโนมัติ
+It was created to provide knowledge on how to create an automated NFT.
 
 ## Reference
 
@@ -27,12 +27,12 @@ git clone https://github.com/ADISAKBOONMARK/nft-auto-generate.git
 
 ```sh
 {
-    "COUNT": "12",                                  <-- จำนวนภาพ
-    "INPUT_FILE_TYPE": ".png",                      <-- นามสกุลไฟล์ที่นำเข้า
-    "OUTPUT_FILE_TYPE": ".png"                      <-- นามสกุลไฟล์ที่ส่งออก
-    "NAME": "name",                                 <-- ชื่อภาพ
-    "DESCRIPTION": "description",                   <-- รายละเอียด
-    "IMAGE_URL": "https://domain.com/image/"        <-- Base URL ของรูปภาพ
+    "COUNT": "12",                                  
+    "INPUT_FILE_TYPE": ".png",                      
+    "OUTPUT_FILE_TYPE": ".png"                      
+    "NAME": "name",                                 
+    "DESCRIPTION": "description",                  
+    "IMAGE_URL": "https://domain.com/image/"        
 }
 ```
 
@@ -69,12 +69,12 @@ pip install Image
 
 ```sh
 {
-    "COUNT": "12",                                  <-- จำนวนภาพ
-    "INPUT_FILE_TYPE": ".png",                      <-- นามสกุลไฟล์ที่นำเข้า
-    "OUTPUT_FILE_TYPE": ".png"                      <-- นามสกุลไฟล์ที่ส่งออก
-    "NAME": "name",                                 <-- ชื่อภาพ
-    "DESCRIPTION": "description",                   <-- รายละเอียด
-    "IMAGE_URL": "https://domain.com/image/"        <-- Base URL ของรูปภาพ
+    "COUNT": "12",                                  
+    "INPUT_FILE_TYPE": ".png",                      
+    "OUTPUT_FILE_TYPE": ".png"                      
+    "NAME": "name",                                 
+    "DESCRIPTION": "description",                   
+    "IMAGE_URL": "https://domain.com/image/"        
 }
 ```
 
@@ -100,9 +100,9 @@ Create Image ID: 8 -> DONE
 Create Image ID: 9 -> DONE
 Create Image ID: 10 -> DONE
 Create Image ID: 11 -> DONE
-Image ID: 11 duplicate! to Image ID: 1 <-- รูปที่ 11 ซ้ำกับรุปที่ 1
+Image ID: 11 duplicate! to Image ID: 1 
 Create Image ID: 12 -> DONE
-Image ID: 12 duplicate! to Image ID: 2 <-- รูปที่ 12 ซ้ำกับรุปที่ 2
+Image ID: 12 duplicate! to Image ID: 2 
 END
 ```
 
@@ -131,10 +131,10 @@ https://domain.com/image/11.png
 END
 ```
 
-## คำอธิบายเพิ่มเติม
+## Explanation
 
 ```sh
-รูปภาพทั้งหมดจะถูกเก็บไว้ที่ images โฟลเดอร์
+All images are stored in the "images" folder.
 
 images/
 -- 1_Background
@@ -144,13 +144,13 @@ images/
 -- 5_Eyes
 -- 6_Mouth
 
-NOTE 1: ลำดับการทับกันของ Layer จะขึ้นอยู่กับเลขด้านหน้า images โฟลเดอร์ 1_*, 2_*, 3_* ตามลำดับ
+NOTE 1: The layer overlap order is based on the number in front of the images folder 1_*, 2_*, 3_* respectively.
 
-NOTE 2: สามารถเพิ่มหรือลดจำนวน เครื่องประดับได้ เช่น ผู้ใช้อยากเพิ่มแขนตัวละครก็ให้สร้างโฟลเดอร์ 7_Arm เพิ่ม
+NOTE 2: Can increase or decrease the number. For example if you want to add an arm to your character. You can create an additional 7_Arm folder.
 ```
 
 ```sh
-รูปภาพทั้งหมดที่ถูกสร้างจะออกมาใน output/images โฟลเดอร์
+All images created will come out in output/images folder.
 
 images/
 -- 1.png
@@ -159,14 +159,14 @@ images/
 ```
 
 ```sh
-สุดท้ายโปรแกรมจะสร้าง metadata ให้ด้วยตามชื่อไฟล์ output/metadata โฟลเดอร์
+Finally, the program will generate metadata for you according to the file name. output/metadata folder.
 
 metadata/
 -- 1
 -- 2
 -- 3
 
-ตัวอย่าง
+Example
 
 {
   "name": "name #1",
@@ -199,23 +199,3 @@ metadata/
     }
   ]
 }
-```
-
-## สนับสนุนผู้พัฒนา
-
-```sh
-🐷 28PX PIG
-
-เป็น Pixel Art Pig Avatar AI Generated
-
-โดยจะมีทั้งหมด 3,333 ชิ้น เป็น NFT ที่ซื้องานผ่านทาง Smart Contract
-ทางเว็บไซต์
-
-✅https://69pixel-nft.club/pig
-
-🚀https://opensea.io/collection/28px-pig
-
-69pixel team
-
-May the pig be with you. 🐖
-```
